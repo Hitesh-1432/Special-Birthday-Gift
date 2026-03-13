@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+  <!-- stylesheet link -->
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <title>Happy Birthday | Hitesh-1432</title>
+</head>
+</body>
+<!-- First Container -->
+  <audio id="clickSound" src="clickSound.mp3" preload="auto"></audio>
+  <div id="firstBox" class="firstContainer show">
+    <h3>Are You Ready Annu ji? 🙈</h3>
+    <div class="buttonBox">
+      <button onclick="showScreen2('firstBox','secondBox')" class="buttons" id="yesButton">YES🤭</button>
+      <button onclick="showNoScreen('firstBox','fourthBox')" class="buttons" id="noButton" >NO😔</button>
+    </div>
+  </div>
+  <!-- No click Box -->
+  <div id="fourthBox" class="fourthContainer">
+    <h3>Really? Maine bahot mehnat se banaya hai annu ji😔</h3>
+    <div class="okButtonBox">
+      <button onclick="showScreen4('fourthBox','secondBox')" class="okButton">Ok I am Ready🙈</button>
+    </div>
+  </div>
+  <!-- Yes Click Box -->
+  <div id="secondBox" class="secondContainer">
+    <h3>🥳Happy Birthday Annu Ji🎂🎉</h3>
+    <p>Wish you many many happy returns of the day💖🎉</p>
+    <audio id="music" src="Pehla Nasha.mp3" preload="auto"></audio>
+    <div class="buttonBox">
+      <button onclick="showScreen3('secondBox','thirdBox')" class="buttons">A Later For You🙈</button>
+    </div>
+  </div>
+  <!-- Third Container -->
+  <div id="thirdBox" class="thirdContainer">
+    <h3>For You💖</h3>
+    <div class="confessionTextBox">
+      <p id="confessionText"></p>
+    </div>
+    <button id="nextBtn" onclick="showScreen5('thirdBox','fifthBox')" class="nextButton">Next >>></button>
+  </div>
+  <!-- Confession Question -->
+  <div id="fifthBox" class="fifthContainer">
+    <h3>Annu Ji, Will You Be My Girl ?👉👈🙈🤭</h3>
+    <div>
+      <button onclick="sendAnswer('no')" class="noBtn">No🙃</button>
+      <button onclick="sendAnswer('yes')" class="yesBtn">Yes🤭</button>
+      <button onclick="sendAnswer('time')" class="needTimeBtn">I Need Some Time🙂</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

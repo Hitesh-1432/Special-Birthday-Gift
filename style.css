@@ -1,0 +1,328 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to top, #42275a, #734b6d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: "Schoolbell", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.firstContainer{
+  height: 100px;
+  width: 350px;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  border: 2px solid pink;
+  border-radius: 30px;
+  overflow: hidden;
+  animation: height 1.5s 0.75s forwards;
+  position: absolute;
+  top: 300px;
+  transition: opacity 0.5s, visibility 0.5s;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes height{
+  from{
+    height: 100px;
+  }
+  to{
+    height: 200px;
+  }
+}
+
+.firstContainer h3{
+  font-size: 20px;
+  position: absolute;
+  top: 25px;
+  color: white;
+}
+
+.firstContainer .buttonBox{
+  position: absolute;
+  top: 120px;
+}
+
+.firstContainer .buttons{
+  height: 50px;
+  width: 120px;
+  background: lightpink;
+  margin: 0 20px;
+  border-radius: 30px;
+  font-size: 20px;
+  color: white;
+  z-index: 10;
+}
+
+.secondContainer{
+  height: 120px;
+  width: 350px;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  border: 2px solid pink;
+  border-radius: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 300px;
+  transition: height 1.5s 2s, opacity 0.5s, visibility 0.5s;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.secondContainer h3{
+  font-size: 20px;
+  position: absolute;
+  top: 25px;
+  color: white;
+}
+
+.secondContainer p{
+  color: white;
+  position: absolute;
+  top: 60px;
+  width: 300px;
+  text-wrap: wrap;
+  text-align: center;
+}
+
+.secondContainer .buttonBox{
+  position: absolute;
+  top: 120px;
+}
+
+.secondContainer .buttons{
+  height: 50px;
+  width: 150px;
+  background: lightpink;
+  margin: 0 20px;
+  border-radius: 30px;
+  font-size: 20px;
+  color: white;
+}
+
+.thirdContainer{
+  height: 700px;
+  width: 350px;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  overflow: scroll;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.thirdContainer h3{
+  font-size: 20px;
+  position: fixed;
+  top: 30px;
+  color: white;
+}
+
+.thirdContainer p{
+  position: absolute;
+  top: 100px;
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.thirdContainer .nextButton{
+  height: 50px;
+  width: 130px;
+  background: lightpink;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  font-size: 25px;
+  border-radius: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s 100s ease;
+}
+
+.confessionTextBox{
+  height: 700px;
+  width: 350px;
+  background: #ffffff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  backdrop-filter: blur(1px);
+}
+
+.confessionTextBox::before{
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background:linear-gradient(
+    to bottom,
+    #42275a11,
+    #42275a00
+  );
+  backdrop-filter: blur(2px);
+  pointer-events:none;
+  z-index: 10;
+}
+
+#confessionText{
+  overflow-y: auto;
+  max-height: 500px;
+  padding-right: 5px;
+  scroll-behavior: smooth;
+  z-index: 1;
+}
+
+#confessionText::after{
+  content:"|";
+  animation:blink 0.8s infinite;
+}
+
+@keyframes blink{
+  50%{
+    opacity:0;
+  }
+}
+
+.fourthContainer{
+  height: 230px;
+  width: 350px;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid pink;
+  transition: opacity 0.5s ease, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fourthContainer h3{
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.okButtonBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.fourthContainer .okButton{
+  height: 70px;
+  width: 200px;
+  border-radius: 30px;
+  border: none;
+  background: lightpink;
+}
+
+.fifthContainer{
+  height: 230px;
+  width: 400px;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid pink;
+  transition: opacity 0.5s ease, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.fifthContainer h3{
+  margin-top: -50px;
+  padding: 0;
+  color: white;
+}
+
+.fifthContainer div{
+  position: absolute;
+  bottom: 30px;
+}
+
+.fifthContainer button{
+  height: 40px;
+  width: 120px;
+  background: lightpink;
+  color: white;
+  border-radius: 30px;
+}
+
+.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Confetti Animation */
+.confetti{
+  position:fixed;
+  width:8px;
+  height:14px;
+  background:red;
+  top:-20px;
+  opacity:0.9;
+  animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+  0%{
+    transform:translateY(-100px) rotate(0deg);
+  }
+  100%{
+    transform:translateY(110vh) rotate(720deg);
+  }
+}
+
+.heart{
+  color: #ff4da6;
+  position: fixed;
+  bottom: -20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes floatUp{
+  0%{ transform:translateY(0); opacity:1; }
+  100%{ transform:translateY(-110vh); opacity:0; }
+}
